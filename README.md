@@ -7,6 +7,16 @@
 
 A modern plugin installer for Vencord/Equicord DevBuild.
 
+## ⚠️ Important: DevBuild Warning
+
+MoonPlugs installs the **DevBuild** (experimental/development) version of Vencord/Equicord. Please read:
+
+- 🧪 **DevBuild is experimental** and may break at any time
+- ❌ **DO NOT** contact Vencord/Equicord teams if something breaks - they don't support DevBuild issues
+- ❌ **DO NOT** contact MoonPlugs either - we're just the installer, not responsible for DevBuild bugs
+- ✅ **Recommended**: Only update DevBuild if you're having problems
+- ⏳ If issues persist after updating, uninstall via Settings or wait ~24h for the next update
+
 ## ✨ Features
 
 - 🔍 Auto-detects Discord and installed mods

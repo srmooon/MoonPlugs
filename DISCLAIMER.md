@@ -2,14 +2,23 @@
 
 By downloading, installing, or using MoonPlugs, you agree to the following terms:
 
+## Jurisdiction
+
+This agreement is governed by the laws of the State of Georgia, United States of America. Any disputes arising from the use of this software shall be subject to the exclusive jurisdiction of the courts located in Georgia, USA.
+
 ## No Warranty
 
-MoonPlugs is provided "AS IS" without warranty of any kind, express or implied. The author makes no guarantees regarding:
+MoonPlugs is provided "AS IS" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the author be liable for any claim, damages, or other liability arising from the use of this software.
 
-- The software's functionality or reliability
-- Compatibility with your system or Discord version
-- The safety or quality of third-party plugins
-- Any damages that may occur from using this software
+## DevBuild Warning
+
+⚠️ **IMPORTANT**: MoonPlugs installs the **DevBuild** (development build) version of Vencord/Equicord. DevBuild is experimental and may break at any time.
+
+- DevBuild is updated frequently and may contain bugs
+- If Discord stops working after an update, **DO NOT** contact Vencord or Equicord teams
+- MoonPlugs is only a manager/installer, not responsible for DevBuild issues
+- **Recommended**: Only update if you're experiencing problems
+- If problems persist after updating, uninstall via MoonPlugs Settings or wait for the next DevBuild update (usually within 24 hours)
 
 ## Use at Your Own Risk
 
@@ -56,6 +65,10 @@ MoonPlugs is an independent project and is **NOT affiliated with, endorsed by, o
 - MoonPlugs does not send any information to external servers (except GitHub for downloading plugins)
 - All operations are performed locally on your machine
 
+## Limitation of Liability
+
+To the maximum extent permitted by applicable law, in no event shall the author be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+
 ## Modifications
 
 The author reserves the right to modify these terms at any time without prior notice.
@@ -66,4 +79,5 @@ By using MoonPlugs, you acknowledge that you have read, understood, and agree to
 
 ---
 
-Last updated: January 2026
+Last updated: January 2026  
+Governing Law: State of Georgia, USA

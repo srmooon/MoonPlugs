@@ -124,6 +124,18 @@ By submitting a plugin, you agree to:
 
 **Malicious plugins will be removed immediately and the author may be reported.**
 
+## Updating Your Plugin
+
+Once your plugin is approved, you can update the version and description yourself using the **Author Panel**:
+
+👉 **[MoonPlugs Author Panel](https://moonplugs-api.srmooon.workers.dev)**
+
+1. Login with your GitHub account
+2. You'll see your plugins listed
+3. Update version/description and click "Update Plugin"
+
+The panel automatically verifies you own the repository before allowing changes.
+
 ## Questions?
 
 Open an issue if you have any questions or problems!
