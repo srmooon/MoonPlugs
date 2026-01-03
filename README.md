@@ -37,6 +37,12 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 
 Want your userplugin listed in MoonPlugs? Check out [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!
 
+## ⚠️ Disclaimer
+
+- **Plugin issues**: If you have problems with a specific plugin, contact the plugin author directly (check the plugin's repository in [plugins.json](plugins.json))
+- **MoonPlugs issues**: If you have problems with MoonPlugs itself, [open an issue](https://github.com/srmooon/MoonPlugs/issues)
+- MoonPlugs is not affiliated with Discord, Vencord, or Equicord
+
 ## ⭐ Support
 
 If you find MoonPlugs useful, please consider giving it a star! It helps a lot! ⭐
