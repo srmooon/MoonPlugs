@@ -2,7 +2,7 @@
   "name": "moonplugs",
   "version": "1.0.0",
   "description": "Plugin installer for Vencord/Equicord DevBuild",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "author": "SrMoon",
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -41,11 +41,13 @@
     },
     "files": [
       "dist/**/*",
-      "package.json"
+      "package.json",
+      "icon.png",
+      "icon.ico"
     ],
     "win": {
       "target": "portable",
-      "icon": "assets/icon.ico"
+      "icon": "icon.ico"
     }
   }
 }
