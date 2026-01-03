@@ -1,13 +1,18 @@
 # MoonPlugs 🌙
 
+[![GitHub stars](https://img.shields.io/github/stars/srmooon/MoonPlugs?style=flat-square)](https://github.com/srmooon/MoonPlugs/stargazers)
+[![GitHub downloads](https://img.shields.io/github/downloads/srmooon/MoonPlugs/total?style=flat-square)](https://github.com/srmooon/MoonPlugs/releases)
+[![Latest release](https://img.shields.io/github/v/release/srmooon/MoonPlugs?style=flat-square)](https://github.com/srmooon/MoonPlugs/releases/latest)
+[![License](https://img.shields.io/github/license/srmooon/MoonPlugs?style=flat-square)](LICENSE)
+
 A modern plugin installer for Vencord/Equicord DevBuild.
 
 ## ✨ Features
 
 - 🔍 Auto-detects Discord and installed mods
 - 🚀 Installs Vencord or Equicord DevBuild automatically
-- � Browse aend install custom plugins with one click
-- � IAutomatic rebuild after plugin changes
+- 📦 Browse and install custom plugins with one click
+- 🔄 Automatic rebuild after plugin changes
 - 🎨 Modern, Discord-like UI
 
 ## 📥 Download
@@ -18,8 +23,8 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 
 - Windows 10/11
 - Discord installed
-- Git (for DevBuild installation)
-- Node.js 18+ (for DevBuild installation)
+- [Git](https://git-scm.com/download/win)
+- [Node.js](https://nodejs.org/) 18+
 
 ## 🚀 How It Works
 
@@ -32,20 +37,11 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 
 | Plugin | Description |
 |--------|-------------|
-| [Voice Narrator Natural](https://github.com/srmooon/VoiceNarratorNatural) | TTS plugin that announces voice channel events using Windows Natural Voices |
+| [Voice Narrator Natural](https://github.com/srmooon/VoiceNarratorNatural) | TTS plugin using Windows Natural Voices |
 
-## 🛠️ Development
+## ⭐ Support
 
-```bash
-# Install dependencies
-npm install
-
-# Run in development mode
-npm run dev
-
-# Build for production
-npm run package:win
-```
+If you find MoonPlugs useful, please consider giving it a star! It helps a lot! ⭐
 
 ## 👤 Author
 
