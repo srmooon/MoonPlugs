@@ -33,6 +33,27 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 3. **Plugins**: Once DevBuild is ready, you can browse and install plugins
 4. **Rebuild**: After installing/uninstalling plugins, MoonPlugs automatically rebuilds the mod
 
+## 🔌 Submit Your Plugin
+
+Want your userplugin listed in MoonPlugs? Open a Pull Request adding your plugin to `plugins.json`:
+
+```json
+{
+  "id": "YourPluginFolder",
+  "name": "Your Plugin Name",
+  "description": "Short description of what your plugin does",
+  "version": "1.0.0",
+  "author": "YourName",
+  "repository": "https://github.com/youruser/YourPlugin",
+  "tags": ["tag1", "tag2"]
+}
+```
+
+**Requirements:**
+- Plugin must be a valid Vencord/Equicord userplugin
+- Repository must be public on GitHub
+- `id` must match the folder name in userplugins
+
 ## ⭐ Support
 
 If you find MoonPlugs useful, please consider giving it a star! It helps a lot! ⭐
