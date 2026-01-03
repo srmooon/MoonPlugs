@@ -111,6 +111,18 @@ Before submitting, make sure your plugin:
 - ✅ Has a public GitHub repository
 - ✅ Works with the latest DevBuild
 - ✅ Has a README with setup instructions (if needed)
+- ✅ Does NOT contain malicious code
+
+## Rules
+
+By submitting a plugin, you agree to:
+
+- Keep your repository public and accessible
+- Not include any malicious, harmful, or deceptive code
+- Be responsible for your own plugin and provide support to users
+- Accept that your plugin may be removed from MoonPlugs at any time if it violates these rules
+
+**Malicious plugins will be removed immediately and the author may be reported.**
 
 ## Questions?
 

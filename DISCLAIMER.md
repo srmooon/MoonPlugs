@@ -27,6 +27,10 @@ MoonPlugs allows installation of third-party plugins from various authors. Regar
 - Plugin repositories are listed in [plugins.json](plugins.json)
 - MoonPlugs does not review, audit, or guarantee the safety of third-party plugins
 - Install third-party plugins at your own risk
+- Plugin authors may modify or remove their plugins at any time without notice
+- The author of MoonPlugs is not responsible for any malicious code in third-party plugins
+
+**If you find a malicious plugin**, please [open an issue](https://github.com/srmooon/MoonPlugs/issues) immediately so it can be removed from the list.
 
 ## MoonPlugs Support
 
