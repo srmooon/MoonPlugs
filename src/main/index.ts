@@ -8,7 +8,7 @@ const PLUGINS_JSON_URL = 'https://raw.githubusercontent.com/srmooon/MoonPlugs/ma
 
 let mainWindow: BrowserWindow | null = null;
 
-// Send log to renderer
+
 function sendLog(message: string) {
   console.log(message);
   mainWindow?.webContents.send('console-log', message);
@@ -45,7 +45,7 @@ app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit(
 ipcMain.on('window-minimize', () => mainWindow?.minimize());
 ipcMain.on('window-close', () => mainWindow?.close());
 
-// ============ HELPERS ============
+
 
 function checkGit(): boolean {
   try { execSync('git --version', { stdio: 'pipe' }); return true; } catch { return false; }
@@ -122,12 +122,12 @@ function getUserPluginsPath(mod: string): string | null {
   return null;
 }
 
-// Inject mod into Discord using pnpm inject (opens separate terminal)
+
 async function injectMod(_mod: string, installPath: string): Promise<void> {
-  // Send message to renderer to show confirmation popup
+  
   mainWindow?.webContents.send('show-inject-popup');
   
-  // Wait for user confirmation
+  
   await new Promise<void>((resolve) => {
     ipcMain.once('inject-confirmed', () => {
       const { exec } = require('child_process');
@@ -137,14 +137,14 @@ async function injectMod(_mod: string, installPath: string): Promise<void> {
   });
 }
 
-// Uninject mod from Discord using pnpm uninject + manual cleanup
+
 async function uninjectMod(_mod: string, installPath: string): Promise<void> {
-  // Open separate terminal for uninject if folder exists
+  
   if (fs.existsSync(installPath)) {
-    // Send message to renderer to show confirmation popup
+    
     mainWindow?.webContents.send('show-uninject-popup');
     
-    // Wait for user confirmation
+    
     await new Promise<void>((resolve) => {
       ipcMain.once('uninject-confirmed', () => {
         const { exec } = require('child_process');
@@ -154,11 +154,11 @@ async function uninjectMod(_mod: string, installPath: string): Promise<void> {
     });
   }
   
-  // Always clean manually too (backup)
+  
   cleanDiscordInjection();
 }
 
-// ============ IPC HANDLERS ============
+
 
 ipcMain.handle('check-dependencies', () => ({ git: checkGit(), node: checkNode(), npm: checkNpm() }));
 ipcMain.handle('detect-installation', () => detectInstallation());
@@ -245,13 +245,13 @@ ipcMain.handle('uninstall-plugin', async (_, { mod, pluginId }) => {
   const installPath = path.join(appData, mod);
   
   try {
-    // Close Discord first
+    
     await killDiscord();
     await new Promise(r => setTimeout(r, 2000));
 
     if (fs.existsSync(pluginDir)) fs.rmSync(pluginDir, { recursive: true, force: true });
 
-    // Rebuild and reinject
+    
     execSync('pnpm build', { cwd: installPath, stdio: 'pipe' });
     await injectMod(mod, installPath);
 
@@ -313,7 +313,7 @@ ipcMain.handle('install-devbuild', async (_, mod: string) => {
   }
 });
 
-// Update mod (git pull + rebuild + reinject)
+
 ipcMain.handle('update-mod', async (_, mod: string) => {
   const appData = process.env.APPDATA || '';
   const installPath = path.join(appData, mod);
@@ -340,7 +340,7 @@ ipcMain.handle('update-mod', async (_, mod: string) => {
   }
 });
 
-// Clean Discord injection manually (remove resources/app folder + restore app.asar)
+
 function cleanDiscordInjection(): void {
   const discordPaths = [
     path.join(process.env.LOCALAPPDATA || '', 'Discord'),
@@ -355,13 +355,13 @@ function cleanDiscordInjection(): void {
       for (const appFolder of appFolders) {
         const resourcesPath = path.join(discordPath, appFolder, 'resources');
         
-        // Remove injected app folder
+        
         const injectedApp = path.join(resourcesPath, 'app');
         if (fs.existsSync(injectedApp)) {
           fs.rmSync(injectedApp, { recursive: true, force: true });
         }
         
-        // Restore original app.asar if backup exists
+        
         const appAsar = path.join(resourcesPath, 'app.asar');
         const backupAsar = path.join(resourcesPath, '_app.asar');
         const backupAsar2 = path.join(resourcesPath, '_app.asar.backup');
@@ -378,7 +378,7 @@ function cleanDiscordInjection(): void {
   }
 }
 
-// Uninstall mod completely
+
 ipcMain.handle('uninstall-mod', async (_, mod: string) => {
   const appData = process.env.APPDATA || '';
   const installPath = path.join(appData, mod);
@@ -387,13 +387,13 @@ ipcMain.handle('uninstall-mod', async (_, mod: string) => {
     await killDiscord();
     await new Promise(r => setTimeout(r, 2000));
 
-    // Try uninject first (may fail if folder is broken)
+    
     await uninjectMod(mod, installPath);
 
-    // Clean Discord injection manually - this is the important part!
+    
     cleanDiscordInjection();
 
-    // Delete mod folder
+    
     if (fs.existsSync(installPath)) {
       try { execSync(`rmdir /s /q "${installPath}"`, { stdio: 'pipe', shell: 'cmd.exe' }); } 
       catch { fs.rmSync(installPath, { recursive: true, force: true }); }

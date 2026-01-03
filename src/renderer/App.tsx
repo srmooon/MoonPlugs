@@ -54,18 +54,18 @@ export default function App() {
   useEffect(() => { 
     init(); 
     
-    // Listen for console logs from main process
+    
     ipcRenderer.on('console-log', (_: any, message: string) => {
       setConsoleLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] ${message}`]);
-      setConsoleExpanded(true); // Auto-expand when new log
+      setConsoleExpanded(true); 
     });
     
-    // Listen for inject popup
+    
     ipcRenderer.on('show-inject-popup', () => {
       setShowInjectPopup(true);
     });
     
-    // Listen for uninject popup
+    
     ipcRenderer.on('show-uninject-popup', () => {
       setShowUninjectPopup(true);
     });
@@ -77,7 +77,7 @@ export default function App() {
     };
   }, []);
 
-  // Auto-scroll console
+  
   useEffect(() => {
     if (consoleRef.current) {
       consoleRef.current.scrollTop = consoleRef.current.scrollHeight;
@@ -282,7 +282,7 @@ export default function App() {
           <p style={{ marginTop: 16, fontSize: 12, color: 'var(--text-muted)' }}>This will clone and build {selectedMod} from source.</p>
         </div>
 
-        {/* Console */}
+        {}
         {consoleLogs.length > 0 && (
           <div className={`console-container ${consoleExpanded ? 'expanded' : 'collapsed'}`}>
             <div className="console-header" onClick={() => setConsoleExpanded(!consoleExpanded)}>
@@ -302,7 +302,7 @@ export default function App() {
           </div>
         )}
 
-        {/* Inject Popup */}
+        {}
         {showInjectPopup && (
           <div className="popup-overlay">
             <div className="popup">
@@ -465,7 +465,7 @@ export default function App() {
         </main>
       </div>
       
-      {/* Console */}
+      {}
       {consoleLogs.length > 0 && (
         <div className={`console-container ${consoleExpanded ? 'expanded' : 'collapsed'}`}>
           <div className="console-header" onClick={() => setConsoleExpanded(!consoleExpanded)}>
@@ -485,7 +485,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Inject Popup */}
+      {}
       {showInjectPopup && (
         <div className="popup-overlay">
           <div className="popup">
@@ -513,7 +513,7 @@ export default function App() {
         </div>
       )}
 
-      {/* Uninject Popup */}
+      {}
       {showUninjectPopup && (
         <div className="popup-overlay">
           <div className="popup">

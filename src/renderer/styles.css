@@ -28,7 +28,7 @@ body {
   user-select: none;
 }
 
-/* Title Bar */
+
 .titlebar {
   display: flex;
   align-items: center;
@@ -79,13 +79,13 @@ body {
   color: white;
 }
 
-/* Main Layout */
+
 .app-container {
   display: flex;
   height: calc(100vh - 32px);
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 220px;
   background: var(--bg-secondary);
@@ -174,7 +174,7 @@ body {
   height: 20px;
 }
 
-/* Content */
+
 .content {
   flex: 1;
   padding: 24px;
@@ -205,7 +205,7 @@ body {
   margin-bottom: 24px;
 }
 
-/* Plugin Cards */
+
 .plugins-grid {
   display: grid;
   gap: 16px;
@@ -268,7 +268,7 @@ body {
   gap: 8px;
 }
 
-/* Buttons */
+
 .btn {
   padding: 10px 20px;
   border-radius: 8px;
@@ -319,7 +319,7 @@ body {
   cursor: not-allowed;
 }
 
-/* Setup Page */
+
 .setup-container {
   display: flex;
   flex-direction: column;
@@ -382,7 +382,7 @@ body {
   font-size: 13px;
 }
 
-/* Loading */
+
 .loading {
   display: flex;
   flex-direction: column;
@@ -405,7 +405,7 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Installed Badge */
+
 .installed-badge {
   display: flex;
   align-items: center;
@@ -418,7 +418,7 @@ body {
   font-weight: 500;
 }
 
-/* Empty State */
+
 .empty-state {
   text-align: center;
   padding: 60px 20px;
@@ -433,7 +433,7 @@ body {
 }
 
 
-/* Console */
+
 .console-container {
   position: fixed;
   bottom: 0;
@@ -511,7 +511,7 @@ body {
   color: #58a6ff;
 }
 
-/* Popup */
+
 .popup-overlay {
   position: fixed;
   top: 0;
