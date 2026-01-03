@@ -42,12 +42,11 @@
     "files": [
       "dist/**/*",
       "package.json",
-      "icon.png",
-      "icon.ico"
+      "icon.png"
     ],
     "win": {
       "target": "portable",
-      "icon": "icon.ico"
+      "icon": "icon.png"
     }
   }
 }
