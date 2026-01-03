@@ -35,24 +35,7 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 
 ## 🔌 Submit Your Plugin
 
-Want your userplugin listed in MoonPlugs? Open a Pull Request adding your plugin to `plugins.json`:
-
-```json
-{
-  "id": "YourPluginFolder",
-  "name": "Your Plugin Name",
-  "description": "Short description of what your plugin does",
-  "version": "1.0.0",
-  "author": "YourName",
-  "repository": "https://github.com/youruser/YourPlugin",
-  "tags": ["tag1", "tag2"]
-}
-```
-
-**Requirements:**
-- Plugin must be a valid Vencord/Equicord userplugin
-- Repository must be public on GitHub
-- `id` must match the folder name in userplugins
+Want your userplugin listed in MoonPlugs? Check out [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide!
 
 ## ⭐ Support
 
