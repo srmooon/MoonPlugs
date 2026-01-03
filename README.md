@@ -33,12 +33,6 @@ Download the latest version from [Releases](https://github.com/srmooon/MoonPlugs
 3. **Plugins**: Once DevBuild is ready, you can browse and install plugins
 4. **Rebuild**: After installing/uninstalling plugins, MoonPlugs automatically rebuilds the mod
 
-## 📦 Available Plugins
-
-| Plugin | Description |
-|--------|-------------|
-| [Voice Narrator Natural](https://github.com/srmooon/VoiceNarratorNatural) | TTS plugin using Windows Natural Voices |
-
 ## ⭐ Support
 
 If you find MoonPlugs useful, please consider giving it a star! It helps a lot! ⭐
@@ -49,4 +43,4 @@ If you find MoonPlugs useful, please consider giving it a star! It helps a lot! 
 
 ## 📄 License
 
-GPL-3.0-or-later
+This software is proprietary. All rights reserved. See [LICENSE](LICENSE) for details.
