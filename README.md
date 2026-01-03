@@ -39,9 +39,13 @@ Want your userplugin listed in MoonPlugs? Check out [CONTRIBUTING.md](CONTRIBUTI
 
 ## ⚠️ Disclaimer
 
-- **Plugin issues**: If you have problems with a specific plugin, contact the plugin author directly (check the plugin's repository in [plugins.json](plugins.json))
-- **MoonPlugs issues**: If you have problems with MoonPlugs itself, [open an issue](https://github.com/srmooon/MoonPlugs/issues)
-- MoonPlugs is not affiliated with Discord, Vencord, or Equicord
+By using MoonPlugs, you agree to our [Terms of Use](DISCLAIMER.md).
+
+**TL;DR:**
+- Plugin issues → Contact the plugin author ([plugins.json](plugins.json))
+- MoonPlugs issues → [Open an issue](https://github.com/srmooon/MoonPlugs/issues)
+- Use at your own risk
+- Not affiliated with Discord, Vencord, or Equicord
 
 ## ⭐ Support
 
