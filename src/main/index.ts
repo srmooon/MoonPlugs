@@ -145,22 +145,43 @@ ipcMain.handle('install-plugin', async (_, { mod, plugin }) => {
   if (!pluginsPath) return { success: false, error: 'DevBuild not found' };
 
   const pluginDir = path.join(pluginsPath, plugin.id);
+  const tempDir = path.join(process.env.TEMP || '', 'MoonPlugs', plugin.id);
   
   try {
+    // Clean up temp and target directories
+    if (fs.existsSync(tempDir)) fs.rmSync(tempDir, { recursive: true });
+    if (fs.existsSync(pluginDir)) fs.rmSync(pluginDir, { recursive: true });
+
+    // Clone the repository
+    execSync(`git clone "${plugin.repository}" "${tempDir}"`, { stdio: 'pipe' });
+
     // Create plugin directory
-    if (!fs.existsSync(pluginDir)) {
-      fs.mkdirSync(pluginDir, { recursive: true });
+    fs.mkdirSync(pluginDir, { recursive: true });
+
+    // Copy files (excluding .git, README, etc)
+    const excludeFiles = ['.git', 'README.md', 'README.pt-BR.md', 'LICENSE', '.gitignore', '.vscode'];
+    const files = fs.readdirSync(tempDir);
+    
+    for (const file of files) {
+      if (excludeFiles.includes(file)) continue;
+      const srcPath = path.join(tempDir, file);
+      const destPath = path.join(pluginDir, file);
+      
+      const stat = fs.statSync(srcPath);
+      if (stat.isDirectory()) {
+        fs.cpSync(srcPath, destPath, { recursive: true });
+      } else {
+        fs.copyFileSync(srcPath, destPath);
+      }
     }
 
-    // Download each file
-    for (const file of plugin.files) {
-      const fileUrl = `https://raw.githubusercontent.com/srmooon/${plugin.id}/main/${file}`;
-      const response = await axios.get(fileUrl);
-      fs.writeFileSync(path.join(pluginDir, file), response.data);
-    }
+    // Clean up temp directory
+    fs.rmSync(tempDir, { recursive: true });
 
     return { success: true };
   } catch (error: any) {
+    // Clean up on error
+    try { if (fs.existsSync(tempDir)) fs.rmSync(tempDir, { recursive: true }); } catch {}
     return { success: false, error: error.message };
   }
 });

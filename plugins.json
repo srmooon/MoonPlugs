@@ -10,13 +10,6 @@
       "version": "1.0.0",
       "author": "SrMoon",
       "repository": "https://github.com/srmooon/VoiceNarratorNatural",
-      "files": [
-        "index.tsx",
-        "native.ts",
-        "settings.tsx",
-        "VoiceSetting.tsx",
-        "sapi5Server.ts"
-      ],
       "tags": ["voice", "tts", "accessibility"]
     }
   ]
