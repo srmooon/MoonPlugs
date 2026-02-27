@@ -7,7 +7,7 @@
       "id": "VoiceNarratorNatural",
       "name": "Voice Narrator Natural",
       "description": "TTS plugin that announces voice channel events using Windows Natural Voices via SAPI5. Check the repository for setup instructions.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": "SrMoon",
       "repository": "https://github.com/srmooon/VoiceNarratorNatural",
       "tags": ["voice", "tts", "accessibility"]
